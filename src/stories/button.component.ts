@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'storybook-button',
@@ -16,7 +15,8 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 })
 export default class ButtonComponent {
 
-  icon: IconDefinition = faArrowLeft;
+  @Input()
+  icon: IconDefinition;
 
   /**
    * Is this the principal call to action on the page?
